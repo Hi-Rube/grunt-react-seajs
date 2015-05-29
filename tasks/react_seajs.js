@@ -1,6 +1,6 @@
 /*
  * grunt-react-seajs
- * https://github.com/root/grunt-react-seajs
+ * https://github.com/Hi-Rube/grunt-react-seajs
  *
  * Copyright (c) 2015 Rube
  * Licensed under the MIT license.
