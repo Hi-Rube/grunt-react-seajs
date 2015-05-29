@@ -1,0 +1,41 @@
+{
+  "name": "grunt-react-seajs",
+  "description": "a grunt plugin to translate react components to seajs modules",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Hi-Rube/grunt-react-seajs",
+  "author": {
+    "name": "Rube",
+    "email": "353371737@qq.com",
+    "url": "hirube.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Hi-Rube/grunt-react-seajs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hi-Rube/grunt-react-seajs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Hi-Rube/grunt-react-seajs/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "uglify-js": "*",
+    "grunt-contrib-concat": "*",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

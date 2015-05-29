@@ -1,0 +1,12 @@
+{
+  "merge": [
+    {
+      "file": [
+        "./test/components/componentA.js",
+        "./test/components/componentB.js"
+      ],
+      "target": "./test/components/build.js"
+    }
+  ],
+  "single": []
+}
