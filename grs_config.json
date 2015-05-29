@@ -2,11 +2,16 @@
   "merge": [
     {
       "file": [
-        "./test/components/componentA.js",
+        "./test/components/*A.js",
         "./test/components/componentB.js"
       ],
-      "target": "./test/components/build.js"
+      "target": "./test/build/build.js"
     }
   ],
-  "single": []
+  "single": [
+    {
+      "target": "./test/build/",
+      "file": ["./test/components/*C.js"]
+    }
+  ]
 }

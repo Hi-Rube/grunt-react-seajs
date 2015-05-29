@@ -28,6 +28,7 @@
     "test": "grunt test"
   },
   "devDependencies": {
+    "glob": "*",
     "uglify-js": "*",
     "grunt-contrib-concat": "*",
     "grunt": "~0.4.5"

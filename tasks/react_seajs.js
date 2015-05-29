@@ -8,7 +8,9 @@
 
 'use strict';
 var UglifyJS = require("uglify-js");
+var glob = require("glob");
 var fs = require("fs");
+var path = require("path");
 var cwd = process.cwd() + "/";
 module.exports = function (grunt) {
 
@@ -21,14 +23,35 @@ module.exports = function (grunt) {
                 grunt.log.error("can't know what file want to be merged at " + mergeIndex + " config");
                 continue;
             }
-            configS.file = configS.file.map(function (item) {
+            var filesMerge = [];
+            configS.file.forEach(function (item) {
                 item = cwd + item;
-                return item;
+                var mg = glob(item, {mark: true, sync: true});
+                filesMerge = filesMerge.concat(mg);
             });
-
-            var result = UglifyJS.minify(configS.file);
+            var result = UglifyJS.minify(filesMerge);
             result.code = "define(function(require,exports,modules){" + result.code + "});";
             fs.writeFileSync(cwd + configS.target, result.code, {encoding: 'utf8'});
+        }
+
+        config.single = config.single || [];
+        for (var singleIndex = 0; singleIndex < config.single.length; singleIndex++) {
+            var configS = config.single[singleIndex];
+            if (typeof (configS.file) == "undefined" || typeof (configS.target) == "undefined") {
+                grunt.log.error("can't know what file want to be moved at " + mergeIndex + " config");
+                continue;
+            }
+            var filesSingle = [];
+            configS.file.forEach(function (item) {
+                item = cwd + item;
+                var mg = glob(item, {mark: true, sync: true});
+                filesSingle = filesSingle.concat(mg);
+            });
+            filesSingle.forEach(function (item) {
+                var result = UglifyJS.minify(item);
+                result.code = "define(function(require,exports,modules){" + result.code + "});";
+                fs.writeFileSync(cwd + configS.target + path.basename(item), result.code, {encoding: 'utf8'});
+            });
         }
     });
 
