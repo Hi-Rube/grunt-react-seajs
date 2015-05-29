@@ -2,12 +2,12 @@
 **grunt-react-seajs** is a plugin to translate component (eg.react component) to a seajs module.		
 
 ##Usage
-Use ```npm install grunt-webpack``` to install.        
+Use ```npm install grunt-react-seajs``` to install.        
 		
 Then add this line to your project's Gruntfile.js gruntfile:      
 
 ```
-grunt.loadNpmTasks('grunt-webpack');
+grunt.loadNpmTasks('grunt-react-seajs');
 ```			
 
 **grunt-react-seajs** has a independent config file. 		
