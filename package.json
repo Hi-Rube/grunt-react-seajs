@@ -27,7 +27,7 @@
   "scripts": {
     "test": "grunt test"
   },
-  "devDependencies": {
+  "dependencies": {
     "glob": "*",
     "uglify-js": "*",
     "grunt-contrib-concat": "*",
