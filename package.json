@@ -1,7 +1,7 @@
 {
   "name": "grunt-react-seajs",
   "description": "a grunt plugin to translate react components to seajs modules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/Hi-Rube/grunt-react-seajs",
   "author": {
     "name": "Rube",
