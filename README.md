@@ -48,3 +48,5 @@ The independent config file example:
 
 ```merge``` is a array include files you want to merge     
 ```single``` is a array include files you just want to translate and move 
+
+feature I will create more options to choose.
