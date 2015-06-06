@@ -49,7 +49,7 @@ module.exports = function (grunt) {
             });
             filesSingle.forEach(function (item) {
                 var result = UglifyJS.minify(item);
-                result.code = "define(function(require,exports,modules){" + result.code + "});";
+                result.code = "define(function(require,exports,module){" + result.code + "});";
                 fs.writeFileSync(cwd + configS.target + path.basename(item), result.code, {encoding: 'utf8'});
             });
         }
