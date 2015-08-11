@@ -1,6 +1,8 @@
 ##Intro
 **grunt-react-seajs** is a plugin to translate component (eg.react component) to a seajs module.		
 
+![](https://img.shields.io/npm/v/grunt-react-seajs.svg?style=flat)
+
 ##Usage
 Use ```npm install grunt-react-seajs``` to install.        
 		
